@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="main.css">
+  <title>Mortgage Calculator</title>
+</head>
+
+<body>
+  <div class="container ui">
+    <div class="ui segment piled">
+      <h1 class="ui huge dividing header">Mortgage Calculator</h1>
+      <form id="loan_form" class="ui form">
+        <div class="field">
+          <div class="three fields">
+            <div class="field">
+              <label for="loan_amount">Loan Amount</label>
+              <div class="ui right labeled input">
+                <label for="loan_amount" class="ui label">$</label>
+                <input id="amount" type="number" name="loan_amount">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="annual-interest">Annual Interest</label>
+              <div class="ui right labeled input">
+                <label for="annual_interest" class="ui label">%</label>
+                <input id="interest" type="number" name="annual_interest">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="number_of_years">Number of Years</label>
+              <div class="ui right labeled input">
+                <label for="years" class="ui label"><i class="calendar check outline icon"></i></label>
+                <input id="years" type="number" name="years" style="margin-left: -10px">
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <input id="before" type="submit" class="huge fluid ui button" value="Calculate">
+            <button id="after" class="huge fluid ui button">Calculating</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Display Results -->
+      <div id="error" class="ui error message">
+        <div class="header">Please Check your numbers.</div>
+      </div>
+      <div id="results" class="ui big message">
+        <h1 id="text_results" class="ui huge dividing header">Results</h1>
+        <form class="ui form">
+          <div class="field">
+            <div class="three fields">
+              <div class="field">
+                <label for="monthly_payment">Monthly Payment</label>
+                <div id="text" class="ui right labeled input">
+                  <label class="ui label">$</label>
+                  <input id="monthly_payment" disabled value="0.00">
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="interest_paid">Interest Paid</label>
+                <div id="text" class="ui right labeled input">
+                  <label class="ui label">$</label>
+                  <input id="interest_paid" disabled value="0.00">
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Total Amount Paid</label>
+                <div id="text" class="ui right labeled input">
+                  <label class="ui label">$</label>
+                  <input id="total_amount_paid" disabled value="0.00">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="footer" class="ui ">
+      <p>Designed using <a href="https://semantic-ui.com/">Semantic UI</a></p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

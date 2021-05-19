@@ -1,0 +1,27 @@
+* {
+  overflow: hidden;
+}
+
+#text {
+  font-size: 1.5rem; 
+  font-weight: lighter;
+}
+
+/* Top Spacing */
+.container {
+  margin-top: 3rem;
+}
+/* Custom Scroll Bars */
+::-webkit-scrollbar {
+  width: .6rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 6px;
+}
+
+/* Hide Loading & Results */
+#results, #after, #error {
+  display: none;
+}
